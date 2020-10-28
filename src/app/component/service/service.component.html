@@ -1,0 +1,12 @@
+
+  <div class=" col-11 container-fluid text-center back">
+    <br>
+    <div class="row  ">
+      <div *ngFor="let item of posts; let i = index" [attr.data-index]="i"  class="col-sm-4">
+             <img src="assets/img/img{{i+1}}.png" >
+              <h4>{{item.title}}</h4>
+         <p>{{item.body}}</p>
+      </div>
+  
+    </div>
+    </div>

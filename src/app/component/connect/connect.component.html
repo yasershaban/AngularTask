@@ -1,0 +1,67 @@
+  <div class=" col-11 container-fluid text-center back">
+
+
+  <form class="" (ngSubmit)=" !UsersForm.invalid && saveUser(Users)" #UsersForm="ngForm">
+    <label></label>
+
+    <fieldset class="form-group">
+      <input type="text" #name="ngModel" [(ngModel)]="Users.name" class="form-control" name="name" required="required"
+         placeholder="FirstName">
+    </fieldset>
+    <fieldset class="form-group">
+      <input type="text" #name="ngModel" [(ngModel)]="Users.username" class="form-control" name="name"
+        required="required"  placeholder="LastName">
+
+    </fieldset>
+    <fieldset class="form-group">
+      <input type="text" #phone="ngModel" [(ngModel)]="Users.phone" class="form-control" name="phone"
+        required="required"  placeholder="PhoneNumber">
+    </fieldset>
+    <fieldset class="form-group">
+      <input type="email"   #email="ngModel" [(ngModel)]="Users.email" class="form-control" name="email"
+        required="required"  placeholder="Email">
+    </fieldset>
+    <br>
+    <div *ngIf="UsersForm.invalid" class="colr"> Error In Validation</div>
+    <br>
+  <div>
+    <button type="submit" class="btn btn-dark" click="" >Submit</button>
+    <br>
+    </div>
+    <div>  <br></div>
+
+  </form>
+</div>
+
+
+
+<div class="col-11 container-fluid text-center  back">
+  <table class="table">
+    <thead>
+
+      <tr>
+        <th>Firstname</th>
+        <th>lastname</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+
+        <td>{{user.name}}</td>
+        <td> {{user.username}}</td>
+        <td> {{user.phone}}</td>
+        <td> {{user.email}}</td>
+
+        <td><button (click)="updateUser(user)" class="btn btn-info">Update</button></td>
+        <td><button (click)="deleteUser(user)" class="btn btn-secondary">Delete</button></td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>

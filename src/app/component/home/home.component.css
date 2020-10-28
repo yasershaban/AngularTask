@@ -1,0 +1,17 @@
+.background{
+    background-image: url(../../../assets/img/home.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+    }
+   
+      .bg {
+        background-image: url(../../../assets/img/home.png);
+       position: absolute; 
+    
+       background-size: cover;
+  min-width: 100%;
+  min-height: 85%;
+        background-position: center;
+
+    }
